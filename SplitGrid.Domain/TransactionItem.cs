@@ -1,5 +1,8 @@
 ﻿namespace SplitGridDomainModel
 {
+	/// <summary>
+	/// TransactionItem class
+	/// </summary>
 	public class TransactionItem
     {
 		public string Error { get; set; }
