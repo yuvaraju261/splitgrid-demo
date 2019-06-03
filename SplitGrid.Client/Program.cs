@@ -22,20 +22,17 @@ namespace SplitGrid.Client
 		}
 		#endregion
 
-		#region GetTransactionResonse
+		#region GetTransactions
 		/// <summary>
-		/// Method to get the transaction date response details
+		/// Method to get the transactions date response details
 		/// </summary>
 		public static List<TransactionItem> GetTransactions()
 		{
 			var restClient = new RestClient(baseUrl);
-
 			var request = new RestRequest("transactionsByDate", Method.GET);
-			request.AddQueryParameter("Date", "03-06-2019");
+			request.AddQueryParameter("Date", "2019-06-03");
 			request.AddQueryParameter("Format", "JSON");
-
 			var result = restClient.Execute<List<TransactionItem>>(request);
-
 			return result.Data;
 		}
 		#endregion
